@@ -60,11 +60,13 @@ import itertools
 
 # Generate combinations for arrays of size 3, 4, and 5
 generated_indicies = []
-for size in range(3, 6):
+for size in range(3, 7):
     for combo in itertools.product([0, 1, 2, 3], repeat=size - 2):
         # Ensure that all arrays start and end with the 3 index
         combo = (3,) + combo + (3,)
         generated_indicies.append(combo)
+
+print(generated_indicies)
 
 generated_results = []
 
